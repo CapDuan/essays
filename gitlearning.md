@@ -39,7 +39,12 @@
 
 
     git reset --hard commit_id
-恢复到 commitId 对应的版本
+    git reset --hard HEAD~
+恢复到 commitId 对应的版本 或上一个版本 HEAD只当前版本，HEAD~上版本 HEAD~200 上200版本
 
     git reflog
 查看操作log（可以查询所有版本ID，可以根据ID恢复到上述的D版本)
+
+----------
+
+
