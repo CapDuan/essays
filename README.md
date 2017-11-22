@@ -154,7 +154,9 @@ bug分支场景如下：
 6. `git stash pop` 恢复现场并删除stash list
 7. `git stash apply` 仅恢复现场并不会删除stash list
 
+
     git stash
+
 保存现场
 
     git stash list
@@ -168,3 +170,6 @@ bug分支场景如下：
 
     git stash drop
 删除现场记录
+
+    git stash apply stash@{0}
+恢复到指定现场
