@@ -114,4 +114,17 @@ O - O - O - O (dev/master<-HEAD)
 
 ----------
 
-git master TEST github TEST
+### git 解决冲突 ###
+当两条分支都有各自的提交后，使用快速merge，很可能造成conflict。
+
+O - O （master commit something） - O(dev1 commit something)
+
+merge cause conflict, fix the conflict in the file.
+add and commit.
+
+    git log --graph --pretty=oneline --abbrev-commit
+可以查看分支合并图
+
+**可以删除dev1分支*
+
+----------
