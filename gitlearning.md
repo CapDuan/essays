@@ -51,3 +51,30 @@
 工作区修改 -> add -> 暂存区 -> commit -> 版本库
 
 ----------
+## 删除文件 ##
+
+误删
+
+    git checkout -- filename
+可以回复最新版本库中代码
+
+真实删除
+
+    git rm filename
+	git commit -m
+
+版本库中删除文件
+
+----------
+
+
+## 关联远程库 ##
+
+    git remote add origin git@server-name:path/repo-name.git
+关联远程库,比如github,或自己搭建的服务器
+
+    git push -u origin master
+第一次推送，将master和远程库的master关联
+
+    git push origin master
+之后的每次推送
