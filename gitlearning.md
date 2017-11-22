@@ -133,4 +133,12 @@ add and commit.
 git 使用Fast forward 模式时，删除分支后，会丢失分支信息
 Fast forward 模式简写ff,git 支持 --no--ff 方式做git merge操作
 
-dev test 2
+**简单说明**
+
+图中是为了尝试 noff 方式以及 ff 方式的不同。
+首先 新建dev分支，merge到master 可以看到`4d42b40`提交后，其实是有一个merge动作的，但那是并没有显示。
+删除dev并重新新建dev后，使用--no-ff 方式 merge 后则出现了分支信息。
+也就是说 使用noff方式merge后，分支信息并没有丢失
+
+![merge](https://raw.githubusercontent.com/CapDuan/MarkDownImg/master/test.png)
+
