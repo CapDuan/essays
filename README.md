@@ -183,9 +183,40 @@ bug分支场景如下：
     git branch -D <name>
 强行删除一个未merge的分支
 
-## 这是一个dev分支的代码 ##
+## 多人协作 ##
+多人协作需要将本地分支推送到远程版本库 remote repository，
+在推送分支时出现推送异常需要 pull 最新代码到本地编辑冲突，在pull时，如果遇到pull失败则需要绑定本地分支和远程分支的关联
 
-1. 新添加dev代码
-2. 我真的要添加代码了
-3. "这不是我添加的哈"
 
+
+    git remote
+查看远程库的信息
+
+    git remote -v 
+查看远程库的详细信息
+
+    git push origin master
+推送master分支（默认 git push 可以省略后面master）
+
+    git push origin xxx
+推送xxx分支到远程库
+
+    git checkout -b xxx origin/xxx
+在本地远程xxx分支到本地
+
+    git pull
+拉取远程库到本地
+
+    git branch --set-upstream xxx origin/<branch>
+关联本地xxx分支和<branch>
+
+
+
+多人协作流程：
+> 
+1. 首先，可以试图用git push origin branch-name推送自己的修改；
+2. 如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；
+3. 如果合并有冲突，则解决冲突，并在本地提交；
+4. 没有冲突或者解决掉冲突后，再用git push origin branch-name推送就能成功！
+5. 
+如果git pull提示“no tracking information”，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream branch-name origin/branch-name。
