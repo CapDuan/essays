@@ -22,11 +22,24 @@
 
 ----------
 
-## 工作时 ##
+## 预提交 ##
 
     git status
 查看git工作区的状态，那些文件没有被add,哪些文件有修改
 
     git diff 
-查看git缓存区中修改内容
+查看git缓存区中修改的具体内容
 
+## 回退以及恢复 ##
+
+    git log 
+查看版本log（只显示当前版本之前的log）
+> 
+> 注意：假如现有ABCD四个版本，你从D版本回退git reset到C 版本，现在只显示ABC，而D版本会不显示
+
+
+    git reset --hard commit_id
+恢复到 commitId 对应的版本
+
+    git reflog
+查看操作log（可以查询所有版本ID，可以根据ID恢复到上述的D版本)
