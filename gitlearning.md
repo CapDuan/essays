@@ -105,5 +105,14 @@ O - O - O - O (dev/master<-HEAD)
     git checkout -b xxx
 创建并切换到xxx分支
 
+    git merge xxx
+将目标分支合并到当前分支
+
+    git barnch -d xxx
+删除某分支
+
+
+----------
+
 
     
