@@ -142,4 +142,5 @@ Fast forward 模式简写ff,git 支持 --no--ff 方式做git merge操作
 
 ![merge](https://raw.githubusercontent.com/CapDuan/MarkDownImg/master/test.png)
 
-【bug已修复】
+## bug分支 ##
+
