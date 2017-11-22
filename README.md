@@ -173,3 +173,12 @@ bug分支场景如下：
 
     git stash apply stash@{0}
 恢复到指定现场
+
+## Feature 分支 ##
+
+建立分支来开发新功能
+但是当没有merge却要抛弃新功能分支时
+使用-D取代-d
+
+    git branch -D <name>
+强行删除一个未merge的分支
