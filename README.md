@@ -30,6 +30,8 @@
     git diff 
 查看git缓存区中修改的具体内容
 
+----------
+
 ## 回退以及恢复 ##
 
     git log 
@@ -78,6 +80,8 @@
 
     git push origin master
 之后的每次推送
+
+----------
 
 ## 分支 ##
 
@@ -142,6 +146,8 @@ Fast forward 模式简写ff,git 支持 --no--ff 方式做git merge操作
 
 ![merge](https://raw.githubusercontent.com/CapDuan/MarkDownImg/master/test.png)
 
+----------
+
 ## bug分支 ##
 
 bug分支场景如下：
@@ -174,6 +180,8 @@ bug分支场景如下：
     git stash apply stash@{0}
 恢复到指定现场
 
+----------
+
 ## Feature 分支 ##
 
 建立分支来开发新功能
@@ -182,6 +190,8 @@ bug分支场景如下：
 
     git branch -D <name>
 强行删除一个未merge的分支
+
+----------
 
 ## 多人协作 ##
 多人协作需要将本地分支推送到远程版本库 remote repository，
@@ -220,3 +230,6 @@ bug分支场景如下：
 4. 没有冲突或者解决掉冲突后，再用git push origin branch-name推送就能成功！
 5. 
 如果git pull提示“no tracking information”，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream branch-name origin/branch-name。
+
+
+----------
