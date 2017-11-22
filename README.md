@@ -144,3 +144,27 @@ Fast forward 模式简写ff,git 支持 --no--ff 方式做git merge操作
 
 ## bug分支 ##
 
+bug分支场景如下：
+
+1. dev分之上正在工作且无法提交更改
+2. 突发bug issue-101,需要拉分支修改bug
+3. 对dev分之上可以使用 `git stash` 保存现场
+4. 再去master或其他分支上拉一条bug分支，然后进行修复
+5. 修复完成后，回到dev分支使用`git stash list`查看现场
+6. `git stash pop` 恢复现场并删除stash list
+7. `git stash apply` 仅恢复现场并不会删除stash list
+
+    git stash
+保存现场
+
+    git stash list
+查看所有现场
+
+    git stash pop
+恢复现场并删除list
+
+    git stash apply
+恢复现场并不会删除list
+
+    git stash drop
+删除现场记录
