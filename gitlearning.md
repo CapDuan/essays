@@ -78,3 +78,32 @@
 
     git push origin master
 之后的每次推送
+
+### 分支 ###
+
+git 分支原理：指针变化
+
+O - O - O （<-master<-HEAD）
+
+添加分支，添加dev指针，HEAD指针指向dev
+
+O - O - O（<-master） - O (dev<-HEAD)
+
+合并后,HEAD指向->dev和master
+
+O - O - O - O (dev/master<-HEAD)
+
+    git branch 
+查看分支
+
+    git branch xxx
+添加xxx分支
+
+    git checkout xxx
+切换到xxx分支
+
+    git checkout -b xxx
+创建并切换到xxx分支
+
+
+    
