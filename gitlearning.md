@@ -79,7 +79,7 @@
     git push origin master
 之后的每次推送
 
-### 分支 ###
+## 分支 ##
 
 git 分支原理：指针变化
 
@@ -114,7 +114,7 @@ O - O - O - O (dev/master<-HEAD)
 
 ----------
 
-### git 解决冲突 ###
+## git 解决冲突 ##
 当两条分支都有各自的提交后，使用快速merge，很可能造成conflict。
 
 O - O （master commit something） - O(dev1 commit something)
@@ -128,3 +128,7 @@ add and commit.
 **可以删除dev1分支*
 
 ----------
+
+## git 分支管理策略 ##
+git 使用Fast forward 模式时，删除分支后，会丢失分支信息
+Fast forward 模式简写ff,git 支持 --no--ff 方式做git merge操作
