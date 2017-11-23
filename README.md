@@ -244,3 +244,24 @@ bug分支场景如下：
 
 标签就是一个易读的cimmit号，每一个标签都可以对应一个commit
 
+
+    git tag xxx yyyyyyyy
+用于新建一个标签，这个标签默认为`HEAD`，也可以制定一个commitId `yyyyyyyy`
+
+    git tag -a <tagname> -m "taginfo message"
+可以制定标签的描述信息
+
+    git tag 
+查看所有标签
+
+    git push origin <tagname>
+推送一个标签到远程库
+
+    git push origin --tags
+可以将本地标签tags都推送到远程库
+
+    git tag -d <tagname>
+删除一个本地标签
+
+    git push origin :refs/tags/<tagname>
+删除一个远程标签
